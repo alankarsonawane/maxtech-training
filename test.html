@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test | Training</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <style>
+    
+    *{
+      margin:0px;
+      padding:0px;
+    }
+    
+    
+    html{
+      scroll-behavior: smooth;
+    }
+    body{
+     background-image:url("images/abtusbg.jpg");
+     background-repeat:no-repeat;
+    background-size: 100% 100%;
+    height:700px;
+    }
+    
+    
+        .wrapper {
+          margin-top: 80;
+          width: 100%;
+          height: 50px;
+          background:transparent;
+          color: white 
+          border-bottom: 2px solid black;
+          display:flex;
+          justify-content:flex-start;
+          align-items:center;
+          border-bottom:2px solid white;
+        }
+        
+        .wrapper i {
+          font-size: 35px;
+          float: left;
+         position:relative;
+         left:10px;
+         top:0px;
+          color: white;
+        }
+        
+        .wrapper h2 {
+          font-size: 25px;
+          position:relative;
+          left:40px;
+          top:0px;
+          color: white;
+        }
+        
+        
+  #sidebar{
+    width:80%;
+    height:620px;
+    background:black;
+    color:white;
+    display:none;
+    justify-content:center;
+    position:absolute;
+    z-index:1;
+    top:50px;
+    box-shadow:5px 5px 5px grey;
+    border-radius: 20px;
+  }
+  
+  #sidebar li{
+    margin-top:15px;
+    margin-bottom:25px;
+    list-style-type: none;
+    display:block;
+    font-size:20px;
+    
+  }
+  #sidebar ul{
+    position:absolute;
+    top:10px;
+    left:50px;
+  }
+  
+  #sidebar a{
+    color:white;
+    text-decoration-line: none;
+  }
+  
+  .test{
+    margin-top:20px;
+    width:100%;
+    height:70px;
+    padding:5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:2px solid white;
+    color:black;
+    
+  }
+  
+  .test a{
+    color:yellow;
+    padding:15px;
+    background-color: green;
+    width:100px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    border-radius:30px;
+    text-decoration: none;
+  }
+  .footer {
+    width: 100%;
+    height: 40px;
+    background-color: skyblue;
+    color: darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed;
+    bottom: 0px;
+  }
+  
+  .footer h4 {
+    color: darkblue;
+  }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container" id="container">
+      
+        <div class="wrapper" id="header">
+          <i class="fa fa-bars" id="bars" onclick="showBar()"></i>
+        
+          <h2>MAXTECH SOLUTION</h2><br>
+        </div>
+        
+  <div id="sidebar">
+    <ul>
+      <li><i class="fa fa-times" onclick="closeBar()" id="icon" ></i></li>
+      <a href="maxtech.html">
+      <li>HOME</li></a>
+      <a href="#objection">
+      <li onclick="closeBar()">OBJECTION HANDLING</li></a>
+      <a href="#calls">
+      <li onclick="closeBar()">CALLS TRAINING</li></a>
+      <a href="#cards">
+      <li onclick="closeBar()">CARD BENEFITS</li>
+      </a>
+      <a href="#mock">
+      <li onclick="closeBar()">TEST</li></a>
+      <a href="#dreamJob">
+      <li onclick="closeBar()">INCENTIVES</li></a>
+      <a href="#dreamJob">
+      <li onclick="closeBar()">PERFORMANCE</li></a>
+    </ul>
+    </div>
+    <div class="test">
+      <h3>Joining Assesment*</h3> <a href="joinning.html"> Start</a>
+    </div>
+    <div class="test">
+      <h3>General Assesment</h3> <a href=""> Start</a>
+    </div>
+    <div class="test">
+      <h3>Product knowledge -1</h3> <a href=""> Start</a>
+    </div>
+    <div class="test">
+      
+      <h3>Product knowledge -2</h3> <a href=""> Start</a>
+    </div>
+    
+    <div class="footer">
+      <h4>Powered By Alankar sonawane</h4>
+    </div>
+    <script>
+    const sidebar = document.getElementById('sidebar');
+    
+    const icon = document.getElementById('icon');
+    
+    
+    function showBar() {
+      sidebar.style.display = "block";
+    }
+    
+    function closeBar() {
+      sidebar.style.display = "none";
+    }
+    
+  </script>
+</body>
+
+</html>
