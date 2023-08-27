@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maxtech Training Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    *{
+      margin:0px;
+      padding:0px;
+    }
+    
+    
+    html{
+      scroll-behavior: smooth;
+    }
+    body{
+     background-image:url("images/abtusbg.jpg");
+     background-repeat:no-repeat;
+    background-size: 100% 100%;
+    }
+    
+    
+        .wrapper {
+          margin-top: 80;
+          width: 100%;
+          height: 50px;
+          background:transparent;
+          color: white 
+          border-bottom: 2px solid black;
+          display:flex;
+          justify-content:flex-start;
+          align-items:center;
+          border-bottom:2px solid white;
+        }
+        
+        .wrapper i {
+          font-size: 35px;
+          float: left;
+         position:relative;
+         left:10px;
+         top:8px;
+          color: white;
+        }
+        
+        .wrapper h2 {
+          font-size: 25px;
+          position:relative;
+          left:40px;
+          top:0px;
+          color: white;
+        }
+        
+        
+  #sidebar{
+    width:80%;
+    height:620px;
+    background:black;
+    color:white;
+    display:none;
+    justify-content:center;
+    position:absolute;
+    z-index:1;
+    top:50px;
+    box-shadow:5px 5px 5px grey;
+    border-radius: 20px;
+  }
+  
+  #sidebar li{
+    margin-top:15px;
+    margin-bottom:25px;
+    list-style-type: none;
+    display:block;
+    font-size:20px;
+    
+  }
+  #sidebar ul{
+    position:absolute;
+    top:10px;
+    left:50px;
+  }
+  
+  #sidebar a{
+    color:white;
+    text-decoration-line: none;
+  }
+  
+    
+
+
+    h4{
+      margin-top:20px;
+      color:white;
+    }
+    
+    main{
+      padding:10px;
+    }
+    
+    
+    
+    .footer{
+      width:100%;
+      height:50px;
+      background-color:skyblue;
+      color:darkblue;
+      display:flex;
+      justify-content: center;
+      align-items:center;
+      position:fixed;
+      top:630px;
+    }
+    h2{
+      margin-top:15px;
+    }
+    
+    
+    .objection{
+      width:100%;
+      height:300px;
+      background-color: black;
+      color:white;
+      margin-bottom:35px;
+      border-radius:40px;
+    }
+    
+    .objection img{
+      border-radius: 40px;
+    }
+   .calls{
+     width:100%;
+      height:300px;
+      background-color:black;
+      color:white;
+      margin-bottom:35px;
+      border-radius:40px;
+    
+   }
+   
+   
+   .calls img{
+      border-radius: 40px;
+   }
+   
+   .card{
+     width:100%;
+      height:300px;
+      background-color:black;
+      color:white;
+      margin-bottom:35px;
+      border-radius:40px;
+
+   }
+   
+   .card img{
+      border-radius: 40px;
+   }
+   
+   .mock{
+     width:100%;
+     height:300px;
+     margin-bottom:100px;
+     border-radius:40px;
+     background-color: black;
+     color:white;
+   }
+   
+   .mock img{
+     border-radius:40px;
+   }
+  </style>
+</head>
+
+<body>
+      <div class="container" id="container">
+      <div class="main">
+        <div class="wrapper" id="header">
+          <i class="fa fa-bars" id="bars" onclick="showBar()"></i>
+        
+          <h2>MAXTECH SOLUTION</h2><br>
+        </div>
+          
+  <div id="sidebar">
+    <ul>
+      <li><i class="fa fa-times" onclick="closeBar()" id="icon" ></i></li>
+      <a href="#header" >
+      <li>HOME</li></a>
+      <a href="#objection">
+      <li onclick="closeBar()">OBJECTION HANDLING</li></a>
+      <a href="#calls">
+      <li onclick="closeBar()">CALLS TRAINING</li></a>
+      <a href="#cards">
+      <li onclick="closeBar()">CARD BENEFITS</li>
+      </a>
+      <a href="#dreamJob">
+      <li onclick="closeBar()">RAISE COMPLAINT</li></a>
+      <a href="#dreamJob">
+      <li onclick="closeBar()">INCENTIVES</li></a>
+      <a href="#dreamJob">
+      <li onclick="closeBar()">PERFORMANCE</li></a>
+    </ul>
+    </div>
+<main>
+  <h4>Welcome to MAXTECH TRAINING PORTAL!</h4><br>
+  <h4>Hope you guys are doing well.</h4><br>
+  <h4>Your General Mock test is waiting for you. Good luck!</h4><br>
+  
+  <div class="footer">
+    <h3>Powered By Alankar sonawane</h3>
+  </div><br>
+  <h2>Training Material</h2><br>
+  <div class="objection" id="objection">
+    <fig>
+      <img src="images/officelexica.jpg" width="100%" height="250px">
+      <center>
+      <figcaption><h3>OBJECTION HANDLING</h3></figcaption>
+      </center>
+    </fig>
+  </div>
+  <div class="calls" id="calls">
+    <fig>
+      <img src="images/calls.jpg" width="100%" height="250px">
+      <center>
+      <figcaption><h3>CALLS TRAINING</h3></figcaption>
+      </center>
+    </fig>
+  </div>
+  <div class="card" id="cards">
+    <fig>
+      <img src="images/samsung.jpg" width="100%" height="250px">
+      <center>
+      <figcaption><h3>CARDS BENEFITS</h3></figcaption>
+      </center>
+    </fig>
+  </div>
+  <div class="mock" id="mock">
+    <fig>
+      <img src="images/test2.jpg" width="100%" height="250px">
+      <center>
+      <figcaption><h3>TESTS</h3></figcaption>
+      </center>
+    </fig>
+  </div>
+</main>
+<script>
+    const sidebar = document.getElementById('sidebar');
+    
+    const icon = document.getElementById('icon');
+    
+    
+    function showBar() {
+      sidebar.style.display = "block";
+    }
+    
+    function closeBar() {
+      sidebar.style.display = "none";
+    }
+    
+  </script>
+</body>
+
+</html>
