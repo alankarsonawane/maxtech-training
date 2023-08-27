@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Objection handling</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    
+    body{
+     background-image:url("images/abtusbg.jpg");
+     background-repeat:no-repeat;
+    background-size: 100% 100%;
+    height:1000px;
+    }
+    
+    
+        .wrapper {
+          margin-top: 80;
+          width: 100%;
+          height: 50px;
+          background:transparent;
+          color: white 
+          border-bottom: 2px solid black;
+          display:flex;
+          justify-content:flex-start;
+          align-items:center;
+          border-bottom:2px solid white;
+        }
+        
+        .wrapper i {
+          font-size: 35px;
+          float: left;
+         position:relative;
+         left:10px;
+         top:0px;
+          color: white;
+        }
+        
+        .wrapper h2 {
+          font-size: 25px;
+          position:relative;
+          left:40px;
+          top:0px;
+          color: white;
+        }
+        
+        
+  #sidebar{
+    width:80%;
+    height:620px;
+    background:black;
+    color:white;
+    display:none;
+    justify-content:center;
+    position:absolute;
+    z-index:1;
+    top:50px;
+    box-shadow:5px 5px 5px grey;
+    border-radius: 20px;
+  }
+  
+  #sidebar li{
+    margin-top:15px;
+    margin-bottom:25px;
+    list-style-type: none;
+    display:block;
+    font-size:20px;
+    
+  }
+  #sidebar ul{
+    position:absolute;
+    top:10px;
+    left:50px;
+  }
+  
+  #sidebar a{
+    color:white;
+    text-decoration-line: none;
+  }
+  
+  details{
+    margin-top:15px;
+  }
+    details summary{
+      font-size:20px;
+      
+    }
+    
+    summary{
+      color:black;
+      font-weight:bolder;
+    }
+    .footer{
+      width:100%;
+      height:50px;
+      background-color:skyblue;
+      color:darkblue;
+      display:flex;
+      justify-content: center;
+      align-items:center;
+      position:fixed;
+      top:630px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+      <div class="container" id="container">
+      <div class="main">
+        <div class="wrapper" id="header">
+          <i class="fa fa-bars" id="bars" onclick="showBar()"></i>
+        
+          <h2>MAXTECH SOLUTION</h2><br>
+        </div>
+          
+  <div id="sidebar">
+    <ul>
+      <li><i class="fa fa-times" onclick="closeBar()" id="icon" ></i></li>
+      <a href="maxtech.html" >
+      <li>HOME</li></a>
+      <a href="#objection">
+      <li onclick="closeBar()">OBJECTION HANDLING</li></a>
+      <a href="#calls">
+      <li onclick="closeBar()">CALLS TRAINING</li></a>
+      <a href="#cards">
+      <li onclick="closeBar()">CARD BENEFITS</li>
+      </a>
+      <a href="#mock">
+      <li onclick="closeBar()">TEST</li></a>
+      <a href="#dreamJob">
+      <li onclick="closeBar()">INCENTIVES</li></a>
+      <a href="#dreamJob">
+      <li onclick="closeBar()">PERFORMANCE</li></a>
+    </ul>
+    </div>
+    <details>
+      <summary>First time Card User.</summary>
+      <h3>Ans a)advantage  of credit card <br>
+
+b) emergency use<br>
+c) cash withdrawal<br>
+d) acceptable every where online,offline, hospital bills, petrol <br>
+e) convert expense in emi with nominal interest 4/8/12 months<br>
+f) regular usage and timely payment will increase chance of getting pre approved personal and home loan 2/4 wheeler loan with nominal documents
+</h3>
+    </details><br>
+    
+    <details>
+      <summary>Already card holder</summary>
+      <h3>a)Compare benefits<br>
+
+You will get more benefits<br>
+
+b)30% more limit<br>
+
+c)Airport lounges for multiple traveller <br>
+
+d)2  cards 2  limit more financial security <br>
+
+e) multiple card reduces chances of decline of payment
+<br>
+f) all banks have tie up with different vendors multiple card helps u enjoy benefits and reward points 
+</h3>
+    </details><br>
+    
+<details>
+  <summary>Already Axis user</summary>
+  <h3>a) bulid relation with customer check Variant
+Pitch other axis cards<br>
+
+b) I am working for distributor we cater to all banks i also have credit which will give same plus more benefits<br>
+
+c) NO documents Required<br>
+
+d)Limit will Increase
+</h3>
+</details><br>
+<details>
+  <summary>DND Angry/Frustrated  Cx</summary>
+  <h3>Ans I think your number is in dnd which accidentally got dialed <br>
+
+I will update to team and get it removed<br> 
+
+Kindly be assured u wi ll never get a call from our side<br>
+
+Have a great day
+</h3>
+</details><br>
+<details>
+<summary>How much Limit i will get?</summary>
+<h3>Ans:3 times your monthly income and available loading
+<br>
+b)30% increased limit with benefits.
+</h3>
+</details><br>
+<details>
+  <summary>I will not share OTP</summary>
+  <h3>Ans: Sir it's complete paperless process<br>
+  
+  It's a digital world everything has become online<br>
+  
+  School college admission, doctor appointment reservation of hotel and flight train and many more
+  <br>
+  It saves times, money and efforts<br>
+  b) Sir Its for your safety and security just to verify your mobile no. <br>
+  
+  c) Please read msg its regarding Credit card application Only<br>
+  
+  d)Many time cx provide their husband/wifes brother or friends no for to process so bank wants to verify its you only .<br>
+  
+  e)Be on Line If your want I will transfer this call to my senior .dont worry .
+  </h3>
+</details><br>
+<details>
+  <summary>I want Lifetime free credit card</summary>
+  <h3>Ans : SIr we have Newly launched Samsung axis credit card which is free for first two years.
+  
+  <br>Sir nothing is free you have to make it free BY using . 
+  <br>
+  NO documents required/ 10-15 days delivery / 30-50% increased limit.
+  </h3>
+</details><br>
+
+<details>
+  <summary>Will My credit imit will get merged?</summary>
+  <h3>Ans: No sir . Tell me you have any past history of emi bounce . no right<br>
+  sO Dont worry ,YOu will diffrent card with diffret benfits and limits. <br>
+  Axis bank allows cx to use 3 credit cards at te same time
+  </h3>
+</details><br>
+
+<details>
+  <summary>My vkyc not getting done, location Access issues!</summary>
+  <h3>Sir please send screenshot will send it to technical tean and will get back to you.</h3>
+</details><br>
+<details>
+  <summary>I dont have my original pancard now for vkyc!</summary>
+  <h3>SIr no Issue will send you goverment website link to download E pan . </h3>
+</details><br>
+<details>
+  <summary>Other challenges will be added soon here for traning and quality purpose.</summary>
+  <h3></h3>
+</details>
+<div class="footer">
+  <h4>Powered By Alankar sonawane</h4>
+</div>
+<script>
+    const sidebar = document.getElementById('sidebar');
+    
+    const icon = document.getElementById('icon');
+    
+    
+    function showBar() {
+      sidebar.style.display = "block";
+    }
+    
+    function closeBar() {
+      sidebar.style.display = "none";
+    }
+    
+  </script>
+</body>
+
+</html>
