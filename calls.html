@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calls Training</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <style>
+     body{
+     background-image:url("images/abtusbg.jpg");
+     background-repeat:no-repeat;
+    background-size: 100% 100%;
+    height:1000px;
+    }
+    
+    
+        .wrapper {
+          margin-top: 80;
+          width: 100%;
+          height: 50px;
+          background:transparent;
+          color: white 
+          border-bottom: 2px solid black;
+          display:flex;
+          justify-content:flex-start;
+          align-items:center;
+          border-bottom:2px solid white;
+        }
+        
+        .wrapper i {
+          font-size: 35px;
+          float: left;
+         position:relative;
+         left:10px;
+         top:0px;
+          color: white;
+        }
+        
+        .wrapper h2 {
+          font-size: 25px;
+          position:relative;
+          left:40px;
+          top:0px;
+          color: white;
+        }
+        
+        
+  #sidebar{
+    width:80%;
+    height:620px;
+    background:black;
+    color:white;
+    display:none;
+    justify-content:center;
+    position:absolute;
+    z-index:1;
+    top:50px;
+    box-shadow:5px 5px 5px grey;
+    border-radius: 20px;
+  }
+  
+  #sidebar li{
+    margin-top:15px;
+    margin-bottom:25px;
+    list-style-type: none;
+    display:block;
+    font-size:20px;
+    
+  }
+  #sidebar ul{
+    position:absolute;
+    top:10px;
+    left:50px;
+  }
+  
+  #sidebar a{
+    color:white;
+    text-decoration-line: none;
+  }
+  
+  
+  details{
+    margin-top:30px;
+    font-size:15px;
+    font-weight:bolder;
+  }
+  summary {
+    color: black;
+    font-weight: bolder;
+  }
+  
+  h3{
+    color:white;
+  }
+  .footer{
+      width:100%;
+      height:50px;
+      background-color:skyblue;
+      color:darkblue;
+      display:flex;
+      justify-content: center;
+      align-items:center;
+      position:fixed;
+      top:630px;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+      <div class="container" id="container">
+      <div class="main">
+        <div class="wrapper" id="header">
+          <i class="fa fa-bars" id="bars" onclick="showBar()"></i>
+        
+          <h2>MAXTECH SOLUTION</h2><br>
+        </div>
+          
+  <div id="sidebar">
+    <ul>
+      <li><i class="fa fa-times" onclick="closeBar()" id="icon" ></i></li>
+      <a href="maxtech.html" >
+      <li>HOME</li></a>
+      <a href="#objection">
+      <li onclick="closeBar()">OBJECTION HANDLING</li></a>
+      <a href="#calls">
+      <li onclick="closeBar()">CALLS TRAINING</li></a>
+      <a href="#cards">
+      <li onclick="closeBar()">CARD BENEFITS</li>
+      </a>
+      <a href="#mock">
+      <li onclick="closeBar()">TEST</li></a>
+      <a href="#dreamJob">
+      <li onclick="closeBar()">INCENTIVES</li></a>
+      <a href="#dreamJob">
+      <li onclick="closeBar()">PERFORMANCE</li></a>
+    </ul>
+    </div><br>
+    <h3>Welcome to Mock calls training</h3>
+    <h3>Good Luck!</h3>
+    <details>
+      <summary>GENERAL CALL FLOW </summary>
+      <h3>A tellecaller should take call in a professional way remembering that we are working for a bank.</h3>
+      <audio controls>
+        <source src="audios/Mazak.mp3" type="audio/mp3">
+      </audio>
+    </details><br>
+   <details>
+     <summary>BENFITS EXPLANATION</summary>
+    <h3> Explain benfits to customer in way it should attract the customer to get the card.</h3>
+      <audio controls>
+        <source src="audios/Mazak.mp3" type="audio/mp3">
+      </audio>
+   </details><br>
+   <details>
+     <summary>AXIS  SAMSUNG CARD CALL DEMO</summary>
+     <h3>Axis Samsung is the easiest card to start your calling journety.</h3>
+      <audio controls>
+        <source src="audios/Mazak.mp3" type="audio/mp3">
+      </audio>
+   </details><br>
+   <details>
+     <summary>AXIS INDIAN OIL CARD</summary>
+     <h3>Indian oil is a rupay card .Most demanding card.Easy to close sale call. </h3>
+     <audio controls>
+       <source src="audios/Mazak.mp3" type="audio/mp3">
+     </audio>
+   </details><br>
+   <details>
+     <summary>I WILL NOT SHARE OTP.. How to tackle? </summary>
+     <h3>Demo call</h3>
+     <audio controls>
+       <source src="audios/Mazak.mp3" type="audio/mp3">
+     </audio>
+   </details>
+   <br>
+<h2>NOTE: Other mock calls will be added soon for training and quality purpose</h2>
+<div class="footer">
+  <h4=>Powered By Alankar sonawane</h4>
+</div>
+<script>
+    const sidebar = document.getElementById('sidebar');
+    
+    const icon = document.getElementById('icon');
+    
+    
+    function showBar() {
+      sidebar.style.display = "block";
+    }
+    
+    function closeBar() {
+      sidebar.style.display = "none";
+    }
+    
+  </script>
+</body>
+
+</html>
