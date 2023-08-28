@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Maxtech Mock test</title>
+  <title>Maxtech Traning Portal</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
@@ -88,9 +88,27 @@
     text-decoration-line: none;
   }
   
+    .ads{
+  width:100%;
+  height:350px;
+  background-image:url('images/techbg2.jpg');
+background-repeat: no-repeat;
+background-size: 100% 100%;
+animation:slider 15s infinite linear;
+
+  }
+  @keyframes slider{
+    0%{background-image: url('images/techbg3.jpg')}
+    25%{background-image: url('images/techbg6.jpg')}
+    50%{background-image: url('images/techbg4.jpg')}
+    75%{background-image: url('images/techbg5.jpg')}
+  }
+
+    main h3{
+      color:white;
+    }
     
-
-
+    
     h4{
       margin-top:20px;
       color:white;
@@ -188,6 +206,10 @@
      display: flex;
      justify-content: center;
      align-items: center;
+     background-image:url("images/load.jpg");
+     background-size: 100% 100%;
+     background-repeat: no-repeat;
+     color:white;
    }
    
    
@@ -209,7 +231,7 @@
   margin: 8px;
   box-sizing: border-box;
   border: 32px solid #fff;
-  border-color:black transparent black transparent;
+  border-color:white transparent white transparent;
   animation: lds-hourglass 1.2s infinite;
 }
 @keyframes lds-hourglass {
@@ -239,9 +261,9 @@
         <div class="wrapper" id="header">
           <i class="fa fa-bars" id="bars" onclick="showBar()"></i>
         
-          <h2>MAXTECH SOLUTION</h2><br>
+          <h2>MAXTECH MUMBAI</h2><br>
         </div>
-          
+        
   <div id="sidebar">
     <ul>
       <li><i class="fa fa-times" onclick="closeBar()" id="icon" ></i></li>
@@ -262,8 +284,11 @@
       <li onclick="closeBar()">PERFORMANCE</li></a>
     </ul>
     </div>
+    <div class="ads">
+    
+    </div><br>
 <main>
-  <h4>Welcome to MAXTECH TRAINING PORTAL!</h4><br>
+  <h3>Welcome to MAXTECH TRAINING PORTAL!</h3><br>
   <h4>Hope you guys are doing well.</h4><br>
   <h4>Your General Mock test is waiting for you. Good luck!</h4><br>
   
@@ -291,6 +316,7 @@
     </fig>
   </div>
   </a>
+  <a href="cards.html">
   <div class="card" id="cards">
     <fig>
       <img src="images/samsung.jpg" width="100%" height="250px">
@@ -299,6 +325,7 @@
       </center>
     </fig>
   </div>
+  </a>
   <a href="test.html">
   <div class="mock" id="mock">
     <fig>
@@ -318,7 +345,7 @@
   
           <div class="lds-hourglass"></div>
       <br>
-      <h3>MAXTECH SOLUTION</h3>
+      <h3>MAXTECH MUMBAI</h3>
  </center>
  </div>
 <script>
@@ -343,7 +370,7 @@
       loader.style.display = "none";
     }
     
-    setTimeout(loadout, 8000);
+    setTimeout(loadout, 6000);
     
     const body = document.getElementById('container');
     
@@ -353,7 +380,7 @@
       body.style.display = "block";
     }
     
-    setTimeout(showBody, 8000);
+    setTimeout(showBody, 6000);
 
 
     
