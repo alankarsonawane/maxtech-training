@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maxtech Traning Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    *{
+      margin:0px;
+      padding:0px;
+    }
+    
+    
+    html{
+      scroll-behavior: smooth;
+    }
+    body{
+     background-image:url("images/abtusbg.jpg");
+     background-repeat:no-repeat;
+    background-size: 100% 100%;
+    }
+    
+    
+        .wrapper {
+          margin-top: 80;
+          width: 100%;
+          height: 50px;
+          background:transparent;
+          color: white 
+          border-bottom: 2px solid black;
+          display:flex;
+          justify-content:flex-start;
+          align-items:center;
+          border-bottom:2px solid white;
+        }
+        
+        .wrapper i {
+          font-size: 35px;
+          float: left;
+         position:relative;
+         left:10px;
+         top:8px;
+          color: white;
+        }
+        
+        .wrapper h2 {
+          font-size: 25px;
+          position:relative;
+          left:40px;
+          top:0px;
+          color: white;
+        }
+        
+        
+  #sidebar{
+    width:80%;
+    height:620px;
+    background:black;
+    color:white;
+    display:none;
+    justify-content:center;
+    position:absolute;
+    z-index:1;
+    top:50px;
+    box-shadow:5px 5px 5px grey;
+    border-radius: 20px;
+  }
+  
+  #sidebar li{
+    margin-top:15px;
+    margin-bottom:25px;
+    list-style-type: none;
+    display:block;
+    font-size:20px;
+    
+  }
+  #sidebar ul{
+    position:absolute;
+    top:10px;
+    left:50px;
+  }
+  
+  #sidebar a{
+    color:white;
+    text-decoration-line: none;
+  }
+  
+    .ads{
+  width:100%;
+  height:350px;
+  background-image:url('images/techbg2.jpg');
+background-repeat: no-repeat;
+background-size: 100% 100%;
+animation:slider 15s infinite linear;
+
+  }
+  @keyframes slider{
+    0%{background-image: url('images/techbg3.jpg')}
+    25%{background-image: url('images/techbg6.jpg')}
+    50%{background-image: url('images/techbg4.jpg')}
+    75%{background-image: url('images/techbg5.jpg')}
+  }
+
+    main h3{
+      color:white;
+    }
+    
+    
+    h4{
+      margin-top:20px;
+      color:white;
+    }
+    
+    main{
+      padding:10px;
+    }
+    
+    
+    
+    .footer{
+      width:100%;
+      height:40px;
+      background-color:skyblue;
+      color:darkblue;
+      display:flex;
+      justify-content: center;
+      align-items:flex-start;
+      position:fixed;
+      bottom:0px;
+      z-index:1;
+    }
+    
+    .footer h4{
+      color:darkblue;
+    }
+    h2{
+      margin-top:15px;
+    }
+    
+    
+    .objection{
+      width:100%;
+      height:300px;
+      background-color: black;
+      color:white;
+      margin-bottom:35px;
+      border-radius:40px;
+      box-shadow:5px 5px 5px grey;
+    }
+    
+    .objection img{
+      border-radius: 40px;
+    }
+   .calls{
+     width:100%;
+      height:300px;
+      background-color:black;
+      color:white;
+      margin-bottom:35px;
+      border-radius:40px;
+      box-shadow:5px 5px 5px grey;
+   }
+   
+   
+   .calls img{
+      border-radius: 40px;
+   }
+   
+   .card{
+     width:100%;
+      height:300px;
+      background-color:black;
+      color:white;
+      margin-bottom:35px;
+      border-radius:40px;
+      box-shadow:5px 5px 5px grey;
+   }
+   
+   .card img{
+      border-radius: 40px;
+   }
+   
+   .mock{
+     width:100%;
+     height:300px;
+     margin-bottom:100px;
+     border-radius:40px;
+     background-color: black;
+     color:white;
+     box-shadow:5px 5px 5px grey;
+   }
+   
+   .mock img{
+     border-radius:40px;
+   }
+   
+   .loader {
+     width: 100%;
+     height: 800px;
+     background-color: white;
+     position: absolute;
+     top: 5px;
+     z-index: 6;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-image:url("images/load.jpg");
+     background-size: 100% 100%;
+     background-repeat: no-repeat;
+     color:white;
+   }
+   
+   
+.loader h3{
+  margin-top:25px;
+}
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #fff;
+  border-color:white transparent white transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+.container {
+  display: none;
+}
+
+     @media screen and (min-width: 480px){
+     h3{
+       font-size:25px;
+       color:white;
+     }
+       .objection{
+         margin:auto;
+         width:600px;
+      height:300px;
+      background-color: black;
+      color:white;
+      margin-bottom:35px;
+      border-radius:40px;
+      box-shadow:5px 5px 5px grey;
+       }
+
+     .calls{
+         margin:auto;
+         width:600px;
+      height:300px;
+      background-color: black;
+      color:white;
+      margin-bottom:35px;
+      border-radius:40px;
+      box-shadow:5px 5px 5px grey;
+       }
+
+    .card{
+         margin:auto;
+         width:600px;
+      height:300px;
+      background-color: black;
+      color:white;
+      margin-bottom:35px;
+      border-radius:40px;
+      box-shadow:5px 5px 5px grey;
+       }
+
+      .mock{
+         margin:auto;
+         width:600px;
+      height:300px;
+      background-color: black;
+      color:white;
+      margin-bottom:35px;
+      border-radius:40px;
+      box-shadow:5px 5px 5px grey;
+       }
+
+      
+
+  </style>
+</head>
+
+<body>
+  <div class="container" id="container">
+      
+        <div class="wrapper" id="header">
+          <i class="fa fa-bars" id="bars" onclick="showBar()"></i>
+        
+          <h2>MAXTECH MUMBAI</h2><br>
+        </div>
+        
+  <div id="sidebar">
+    <ul>
+      <li><i class="fa fa-times" onclick="closeBar()" id="icon" ></i></li>
+      <a href="#header" >
+      <li>HOME</li></a>
+      <a href="#objection">
+      <li onclick="closeBar()">OBJECTION HANDLING</li></a>
+      <a href="#calls">
+      <li onclick="closeBar()">CALLS TRAINING</li></a>
+      <a href="#cards">
+      <li onclick="closeBar()">CARD BENEFITS</li>
+      </a>
+      <a href="#mock">
+      <li onclick="closeBar()">TEST</li></a>
+      <a href="performance.html">
+      <li onclick="closeBar()">PERFORMANCE</li></a>
+    </ul>
+    </div>
+    <div class="ads">
+      
+    </div>
+  
+    <br>
+<main>
+  <h3>Welcome to MAXTECH TRAINING PORTAL!</h3><br>
+  <h4>Hope you guys are doing well.</h4><br>
+  <h4>Your General Mock test is waiting for you. Good luck!</h4><br>
+  
+  <div class="footer">
+    <h4>Developed By Alankar sonawane</h4>
+  </div><br>
+  <h2>Training Material</h2><br>
+  <a href="objection.html">
+  <div class="objection" id="objection" data-aos="slide-up">
+    <fig>
+      <img src="images/officelexica.jpg" width="100%" height="250px">
+      <center>
+      <figcaption><h4>OBJECTION HANDLING</h4></figcaption>
+      </center>
+    </fig>
+  </div>
+  </a>
+  <a href="calls.html">
+  <div class="calls" id="calls" data-aos="slide-up">
+    <fig>
+      <img src="images/calls.jpg" width="100%" height="250px">
+      <center>
+      <figcaption><h4>CALLS TRAINING</h4></figcaption>
+      </center>
+    </fig>
+  </div>
+  </a>
+  <a href="cards.html">
+  <div class="card" id="cards" data-aos="slide-up">
+    <fig>
+      <img src="images/samsung.jpg" width="100%" height="250px">
+      <center>
+      <figcaption><h4>CARDS BENEFITS</h4></figcaption>
+      </center>
+    </fig>
+  </div>
+  </a>
+  <a href="test.html">
+  <div class="mock" id="mock" data-aos="slide-up">
+    <fig>
+      <img src="images/test2.jpg" width="100%" height="250px">
+      <center>
+      <figcaption><h4>TESTS</h4></figcaption>
+      </center>
+    </fig>
+  </div>
+  </a>
+</main>
+</div>
+
+<div class="loader" id="loader">
+
+  <center>
+  
+          <div class="lds-hourglass"></div>
+      <br>
+      <h3 data-aos="slide-left">MAXTECH TRAINING PORTAL</h3><br>
+    <h5 data-aos="slide-right">All rights reserved 2023</h5><br><br>
+    <h5 data-aos="slide-in">Developed By Alankar Sonawane</h5>
+ </center>
+ </div>
+<script>
+    const sidebar = document.getElementById('sidebar');
+    
+    const icon = document.getElementById('icon');
+    
+    
+    function showBar() {
+      sidebar.style.display = "block";
+    }
+    
+    function closeBar() {
+      sidebar.style.display = "none";
+    }
+    
+    const loader = document.getElementById('loader');
+    
+   
+    
+    function loadout() {
+      loader.style.display = "none";
+    }
+    
+    setTimeout(loadout, 6000);
+    
+    const body = document.getElementById('container');
+    
+    console.log(body);
+    
+    function showBody() {
+      body.style.display = "block";
+    }
+    
+    setTimeout(showBody, 6000);
+
+
+    
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
