@@ -1,448 +1,103 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Maxtech Traning Portal</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <style>
-    *{
-      margin:0px;
-      padding:0px;
-    }
-    
-    
-    html{
-      scroll-behavior: smooth;
-    }
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>login form </title>
+    <style>
     body{
-     background-image:url("images/abtusbg.jpg");
-     background-repeat:no-repeat;
-    background-size: 100% 100%;
+      height:700px;
+      background-image:url(images/abtusbg.jpg);
+      background-size:100% 100%;
+      background-repeat:no-repeat;
     }
-    
-    
-        .wrapper {
-          margin-top: 80;
-          width: 100%;
-          height: 50px;
-          background:transparent;
-          color: white 
-          border-bottom: 2px solid black;
-          display:flex;
-          justify-content:flex-start;
-          align-items:center;
-          border-bottom:2px solid white;
-        }
+      .box{
+       
+        width:100%;
+        background-color:yellow;
+        color:red;
+        height:400px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+      }
+      
+      h5{
+        color:red;
+      }
+      .lgform{
+        margin-top:50px;
+        border:2px solid white;
+        border-radius: 40px;
+        height:300px;
         
-        .wrapper i {
-          font-size: 35px;
-          float: left;
-         position:relative;
-         left:10px;
-         top:8px;
-          color: white;
-        }
-        
-        .wrapper h2 {
-          font-size: 25px;
-          position:relative;
-          left:40px;
-          top:0px;
-          color: white;
-        }
-        
-        
-  #sidebar{
-    width:80%;
-    height:620px;
-    background:black;
-    color:white;
-    display:none;
-    justify-content:center;
-    position:absolute;
-    z-index:1;
-    top:50px;
-    box-shadow:5px 5px 5px grey;
-    border-radius: 20px;
-  }
-  
-  #sidebar li{
-    margin-top:15px;
-    margin-bottom:25px;
-    list-style-type: none;
-    display:block;
-    font-size:20px;
-    
-  }
-  #sidebar ul{
-    position:absolute;
-    top:10px;
-    left:50px;
-  }
-  
-  #sidebar a{
-    color:white;
-    text-decoration-line: none;
-  }
-  
-    .ads{
-  width:100%;
-  height:350px;
-  background-image:url('images/techbg2.jpg');
-background-repeat: no-repeat;
-background-size: 100% 100%;
-animation:slider 15s infinite linear;
-
-  }
-  @keyframes slider{
-    0%{background-image: url('images/techbg3.jpg')}
-    25%{background-image: url('images/techbg6.jpg')}
-    50%{background-image: url('images/techbg4.jpg')}
-    75%{background-image: url('images/techbg5.jpg')}
-  }
-
-    main h3{
-      color:white;
-    }
-    
-    
-    h4{
-      margin-top:20px;
-      color:white;
-    }
-    
-    main{
-      padding:10px;
-    }
-    
-    
-    
-    .footer{
-      width:100%;
-      height:40px;
-      background-color:skyblue;
-      color:darkblue;
-      display:flex;
-      justify-content: center;
-      align-items:flex-start;
-      position:fixed;
-      bottom:0px;
-      z-index:1;
-    }
-    
-    .footer h4{
-      color:darkblue;
-    }
-    h2{
-      margin-top:15px;
-    }
-    
-    
-    .objection{
-      width:100%;
-      height:300px;
-      background-color: black;
-      color:white;
-      margin-bottom:35px;
-      border-radius:40px;
-      box-shadow:5px 5px 5px grey;
-    }
-    
-    .objection img{
-      border-radius: 40px;
-    }
-   .calls{
-     width:100%;
-      height:300px;
-      background-color:black;
-      color:white;
-      margin-bottom:35px;
-      border-radius:40px;
-      box-shadow:5px 5px 5px grey;
-   }
-   
-   
-   .calls img{
-      border-radius: 40px;
-   }
-   
-   .card{
-     width:100%;
-      height:300px;
-      background-color:black;
-      color:white;
-      margin-bottom:35px;
-      border-radius:40px;
-      box-shadow:5px 5px 5px grey;
-   }
-   
-   .card img{
-      border-radius: 40px;
-   }
-   
-   .mock{
-     width:100%;
-     height:300px;
-     margin-bottom:100px;
-     border-radius:40px;
-     background-color: black;
-     color:white;
-     box-shadow:5px 5px 5px grey;
-   }
-   
-   .mock img{
-     border-radius:40px;
-   }
-   
-   .loader {
-     width: 100%;
-     height: 800px;
-     background-color: white;
-     position: absolute;
-     top: 5px;
-     z-index: 6;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     background-image:url("images/load.jpg");
-     background-size: 100% 100%;
-     background-repeat: no-repeat;
-     color:white;
-   }
-   
-   
-.loader h3{
-  margin-top:25px;
-}
-.lds-hourglass {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-.lds-hourglass:after {
-  content: " ";
-  display: block;
-  border-radius: 50%;
-  width: 0;
-  height: 0;
-  margin: 8px;
-  box-sizing: border-box;
-  border: 32px solid #fff;
-  border-color:white transparent white transparent;
-  animation: lds-hourglass 1.2s infinite;
-}
-@keyframes lds-hourglass {
-  0% {
-    transform: rotate(0);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-  50% {
-    transform: rotate(900deg);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  100% {
-    transform: rotate(1800deg);
-  }
-}
-
-.container {
-  display: none;
-}
-
-     @media screen and (min-width: 480px){
-     h3{
-       font-size:25px;
+      }
+      
+      .lgform input{
+        margin-top:20px;
+        width:250px;
+        height:30px;
+        border:none;
+        border-bottom:2px solid black;
+        background:transparent;
+        font-size: 17px;
+        color:white;
+       
+      }
+     
+     ::placeholder{
        color:white;
      }
-       .objection{
-         margin:auto;
-         width:600px;
-      height:300px;
-      background-color: black;
-      color:white;
-      margin-bottom:35px;
-      border-radius:40px;
-      box-shadow:5px 5px 5px grey;
-       }
-
-     .calls{
-         margin:auto;
-         width:600px;
-      height:300px;
-      background-color: black;
-      color:white;
-      margin-bottom:35px;
-      border-radius:40px;
-      box-shadow:5px 5px 5px grey;
-       }
-
-    .card{
-         margin:auto;
-         width:600px;
-      height:300px;
-      background-color: black;
-      color:white;
-      margin-bottom:35px;
-      border-radius:40px;
-      box-shadow:5px 5px 5px grey;
-       }
-
-      .mock{
-         margin:auto;
-         width:600px;
-      height:300px;
-      background-color: black;
-      color:white;
-      margin-bottom:35px;
-      border-radius:40px;
-      box-shadow:5px 5px 5px grey;
-       }
-
       
-
-  </style>
-</head>
-
-<body>
-  <div class="container" id="container">
+     button{
+       width:140px;
+       height:30px;
+       padding:5px;
+       color:white;
+       background-color:darkblue;
+       border-radius:40px;
+       border:1px solid white;
       
-        <div class="wrapper" id="header">
-          <i class="fa fa-bars" id="bars" onclick="showBar()"></i>
-        
-          <h2>MAXTECH MUMBAI</h2><br>
-        </div>
-        
-  <div id="sidebar">
-    <ul>
-      <li><i class="fa fa-times" onclick="closeBar()" id="icon" ></i></li>
-      <a href="#header" >
-      <li>HOME</li></a>
-      <a href="#objection">
-      <li onclick="closeBar()">OBJECTION HANDLING</li></a>
-      <a href="#calls">
-      <li onclick="closeBar()">CALLS TRAINING</li></a>
-      <a href="#cards">
-      <li onclick="closeBar()">CARD BENEFITS</li>
-      </a>
-      <a href="#mock">
-      <li onclick="closeBar()">TEST</li></a>
-      <a href="performance.html">
-      <li onclick="closeBar()">PERFORMANCE</li></a>
-    </ul>
+     }
+     
+     .lgform i{
+       font-size: 60px;
+       color:white;
+     }
+     
+     h1{
+       color:white;
+     }
+    </style>
+  </head>
+  <body>
+    <center>
+    <h1>MAXTECH MUMBAI </h1>
+    </center>
+    <div class="box" id="box">
+      <center>
+        <h3>Body material</h3>
+      </center>
     </div>
-    <div class="ads">
-      
-    </div>
-  
-    <br>
-<main>
-  <h3>Welcome to MAXTECH TRAINING PORTAL!</h3><br>
-  <h4>Hope you guys are doing well.</h4><br>
-  <h4>Your General Mock test is waiting for you. Good luck!</h4><br>
-  
-  <div class="footer">
-    <h4>Developed By Alankar sonawane</h4>
-  </div><br>
-  <h2>Training Material</h2><br>
-  <a href="objection.html">
-  <div class="objection" id="objection" data-aos="slide-up">
-    <fig>
-      <img src="images/officelexica.jpg" width="100%" height="250px">
+    <div class="lgform" id="lgform">
       <center>
-      <figcaption><h4>OBJECTION HANDLING</h4></figcaption>
+        <i class="fas fa-user-circle"></i><br>
+      <input type="text" place placeholder="Enter Username" id="username"><br>
+      <input type="password" place placeholder="Enter password" id="pass"><br><br><br>
+      <button onclick="show()">SUBMIT</button>
+      <h5 id="p"></h5>
       </center>
-    </fig>
-  </div>
-  </a>
-  <a href="calls.html">
-  <div class="calls" id="calls" data-aos="slide-up">
-    <fig>
-      <img src="images/calls.jpg" width="100%" height="250px">
-      <center>
-      <figcaption><h4>CALLS TRAINING</h4></figcaption>
-      </center>
-    </fig>
-  </div>
-  </a>
-  <a href="cards.html">
-  <div class="card" id="cards" data-aos="slide-up">
-    <fig>
-      <img src="images/samsung.jpg" width="100%" height="250px">
-      <center>
-      <figcaption><h4>CARDS BENEFITS</h4></figcaption>
-      </center>
-    </fig>
-  </div>
-  </a>
-  <a href="test.html">
-  <div class="mock" id="mock" data-aos="slide-up">
-    <fig>
-      <img src="images/test2.jpg" width="100%" height="250px">
-      <center>
-      <figcaption><h4>TESTS</h4></figcaption>
-      </center>
-    </fig>
-  </div>
-  </a>
-</main>
-</div>
-
-<div class="loader" id="loader">
-
-  <center>
-  
-          <div class="lds-hourglass"></div>
-      <br>
-      <h3 data-aos="slide-left">MAXTECH TRAINING PORTAL</h3><br>
-    <h5 data-aos="slide-right">All rights reserved 2023</h5><br><br>
-    <h5 data-aos="slide-in">Developed By Alankar Sonawane</h5>
- </center>
- </div>
+</div><br>
+<center>
+<h4>Developed By Alankar sonawane</h4></center>
 <script>
-    const sidebar = document.getElementById('sidebar');
-    
-    const icon = document.getElementById('icon');
-    
-    
-    function showBar() {
-      sidebar.style.display = "block";
-    }
-    
-    function closeBar() {
-      sidebar.style.display = "none";
-    }
-    
-    const loader = document.getElementById('loader');
-    
-   
-    
-    function loadout() {
-      loader.style.display = "none";
-    }
-    
-    setTimeout(loadout, 6000);
-    
-    const body = document.getElementById('container');
-    
-    console.log(body);
-    
-    function showBody() {
-      body.style.display = "block";
-    }
-    
-    setTimeout(showBody, 6000);
+  const _0x1270e0=_0x2764;(function(_0x4b9a5b,_0x1e7023){const _0x430fc0=_0x2764,_0x113f94=_0x4b9a5b();while(!![]){try{const _0x2d2297=parseInt(_0x430fc0(0x87))/0x1*(-parseInt(_0x430fc0(0x8d))/0x2)+parseInt(_0x430fc0(0x86))/0x3+parseInt(_0x430fc0(0x93))/0x4+parseInt(_0x430fc0(0x96))/0x5+-parseInt(_0x430fc0(0x8f))/0x6*(parseInt(_0x430fc0(0x97))/0x7)+parseInt(_0x430fc0(0x9b))/0x8+-parseInt(_0x430fc0(0x91))/0x9*(parseInt(_0x430fc0(0x88))/0xa);if(_0x2d2297===_0x1e7023)break;else _0x113f94['push'](_0x113f94['shift']());}catch(_0x3279a9){_0x113f94['push'](_0x113f94['shift']());}}}(_0x52c8,0x9dcb7));function _0x2764(_0x2a5353,_0x1eea7c){const _0x52c854=_0x52c8();return _0x2764=function(_0x276429,_0xd342a3){_0x276429=_0x276429-0x82;let _0xa7d16c=_0x52c854[_0x276429];return _0xa7d16c;},_0x2764(_0x2a5353,_0x1eea7c);}function hi(){const _0x4ffe09=_0x2764;console['log'](_0x4ffe09(0x82));}hi();const box=document[_0x1270e0(0x92)](_0x1270e0(0x8a)),names=['Alankar','Rahul',_0x1270e0(0x98)],ps=document['getElementById'](_0x1270e0(0x95)),lg=document[_0x1270e0(0x92)](_0x1270e0(0x90)),pass=[_0x1270e0(0x8c),_0x1270e0(0x94)],un=document['getElementById'](_0x1270e0(0x9a)),msg=document[_0x1270e0(0x92)]('p');function _0x52c8(){const _0xc4466a=['4661496kJZHwF','8898','pass','4786100gtFpzD','7BRyUzf','Vishal','maxtech.html','username','2601248SGlekz','log','Hello\x20World!','value','Unautorised\x20Access','innerHTML','3195591LKgtKJ','1XjjCrB','310TYxnAN','8899','box','Sorry\x20Try\x20Again','1234','514688ZYmDJM','href','6766902ufMukd','lgform','430101WFLIfJ','getElementById'];_0x52c8=function(){return _0xc4466a;};return _0x52c8();}function show(){const _0x16c458=_0x1270e0;switch(ps[_0x16c458(0x83)]){case ps[_0x16c458(0x83)]=_0x16c458(0x94):window['location'][_0x16c458(0x8e)]=_0x16c458(0x99);break;case ps[_0x16c458(0x83)]=_0x16c458(0x89):window['location']['href']=_0x16c458(0x99);break;default:console[_0x16c458(0x9c)]('Unautorised\x20Access'),un[_0x16c458(0x83)]=_0x16c458(0x8b),msg[_0x16c458(0x85)]=_0x16c458(0x84);}};
+  
+  
+  
 
-
-    
-  </script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-</body>
-
+</script>
+  </body>
 </html>
